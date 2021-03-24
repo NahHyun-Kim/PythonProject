@@ -11,6 +11,8 @@
       <sourceFolder url="file://$MODULE_DIR$/python_nomad" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/python_nomad/basic" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/python_nomad/practice" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pythonCore" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/pythonCore/practice" isTestSource="false" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.9" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
