@@ -12,3 +12,5 @@ for line in lines:
     print(line)
 f.close()
 
+# read() 함수를 이용하여 파일 내용 전체를 문자열로 반환 가능
+
