@@ -323,3 +323,6 @@ Thumbs.db
 PythonClass/.idea/*
 
 # End of https://www.toptal.com/developers/gitignore/api/python,intellij,eclipse
+
+# python gif 파일(위젯 실습용)
+PythonClass/gif/*
