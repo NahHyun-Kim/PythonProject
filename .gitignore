@@ -326,3 +326,6 @@ PythonClass/.idea/*
 
 # python gif 파일(위젯 실습용)
 PythonClass/gif/*
+
+# selenium webdriver
+webdriver/*
