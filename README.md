@@ -1,1 +1,1 @@
-# Pycharm Python Study(codeit, practice..)
+python study
