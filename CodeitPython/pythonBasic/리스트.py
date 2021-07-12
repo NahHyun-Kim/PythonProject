@@ -1,4 +1,5 @@
 # 여러 개의 값을 저장하고자 할 때는 list 사용
+# list (sequence + mutable - 값을 변경할 수 있음)
 numbers = [1, 2, 3, 4, 5, 6]
 names = ["나현", "영하"]
 
@@ -33,7 +34,10 @@ print(len(funcnumbers)) # 전체 함수의 길이 출력(현재 0)
 funcnumbers.append(5) # funcnumbers의 끝에 정수 5를 넣으라는 함수
 funcnumbers.append(8)
 funcnumbers.append(9)
-print("리스트의 길이는: %d" % len(funcnumbers))
+print("리스트의 길이는: %d" % len(funcnumbers)) # len(리스트)로 요소(값)의 개수를 알 수 있음
+print("리스트 중 9의 개수는 %d개" % funcnumbers.count(9)) # 리스트.count(체크할 값) 으로 리스트에 특정 요소가 몇 개 있는지 알아낼 수 있음
+funcnumbers.reverse() # 역방향으로 바꾸기
+funcnumbers.clear() # 리스트 값 초기화
 
 # 리스트 함수 2(제거 del, 원하는 자리에 요소 추가 insert)
 del funcnumbers[1] # funcnumbers의 두번째 값 제거
