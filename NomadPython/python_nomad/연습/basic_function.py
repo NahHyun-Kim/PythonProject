@@ -13,10 +13,10 @@ def multiplex(a,b):
 def divide(a,b):
     return round(a / b,2)
 
-def discard(a,b):
+def discard(a,b): # 버림 나눗셈
     return a // b
 
-def remainder(a,b):
+def remainder(a,b): # 나머지 연산
     return a % b
 
 print(minus(a,b))

@@ -12,3 +12,4 @@ nh = {
 print(nh)
 nh["studying"] = True # dictionary에 데이터 추가 가능
 print(nh)
+p

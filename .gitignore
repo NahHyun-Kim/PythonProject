@@ -320,12 +320,12 @@ Thumbs.db
 .prof
 
 .idea/*
-PythonClass/.idea/*
+학교수업/.idea/*
 
 # End of https://www.toptal.com/developers/gitignore/api/python,intellij,eclipse
 
 # python gif 파일(위젯 실습용)
-PythonClass/gif/*
+학교수업/gif/*
 
 # selenium webdriver
 webdriver/*

@@ -13,5 +13,5 @@ nh = {
                   "potato"]
 }
 
-print(nh["fav_food"])
+print(f'좋아하는 음식 : {nh["fav_food"]}') # dictionary의 key값으로 value를 가져올 수 있다.
 print(nh)
