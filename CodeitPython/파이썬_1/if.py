@@ -75,7 +75,7 @@ year = 1988
 while year < 2016:
     year = year + 1
     add = win + (win * 0.12)
-    win = add
+    win = add # 은행 이자 12%를 매년 쌓은 결과
     if add > apart:
         print(f"{round(add - apart)}원 차이로 동일 아저씨의 말씀이 맞습니다.")
 

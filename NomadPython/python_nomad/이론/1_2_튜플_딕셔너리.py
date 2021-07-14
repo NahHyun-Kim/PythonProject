@@ -15,3 +15,10 @@ nh = {
 
 print(f'좋아하는 음식 : {nh["fav_food"]}') # dictionary의 key값으로 value를 가져올 수 있다.
 print(nh)
+print(type(nh))
+
+# dictionary의 key값 출력(dict.keys()) , value값 출력(dict.values()), key-value값 출력(dict.items())
+# dictionary의 value값 변경 : dict['key값'] = '바꿀 value값'
+# dictionary에 data 추가 : dict['새로운 key값'] = '넣을 value값'
+# dictionary 요소 삭제 : del dict[key값]
+# dictionary key를 사용하여 value값 얻기 : dict[key값], dict.get('key값')

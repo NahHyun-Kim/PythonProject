@@ -22,7 +22,7 @@ print(numbers[:3]) # 처음부터 0,1,2번째 수가 리턴됨
 
 # 리스트 변경
 numbers[0] = 7
-print(numbers) # 0번째(1)의 자리에 7을 넣어, 7,1,2,3,4,5,6 출력
+print(numbers) # 0번째(1)의 자리에 7을 넣어, 7,2,3,4,5,6 출력
 
 numbers[1] = numbers[0] + numbers[1] # 2의 자리에 7+2을 대입하여 9 출력
 print(numbers)
@@ -41,12 +41,13 @@ funcnumbers.clear() # 리스트 값 초기화
 
 # 리스트 함수 2(제거 del, 원하는 자리에 요소 추가 insert)
 del funcnumbers[1] # funcnumbers의 두번째 값 제거
+# del funcnumbers[2:] -> 인덱스 2부터 마지막 값까지 삭제
 print(funcnumbers)
     # del numbers[4:] 인덱스 4부터 마지막까지 삭제할 것
-funcnumbers.insert(1, 2) # index 0 자리에 정수 1을 넣어줄 것
+funcnumbers.insert(1, 5) # index 1 자리에 정수 5를 넣을 것(그 자리에 들어가고, 그 뒤의 값들은 한자리씩 밀려남)
 print(funcnumbers)
 
-# 리스트 함수 3(정렬 sorted 연결 +)
+# 리스트 함수 3(오름차순 정렬 sorted, 연결 +)
 print(sorted(funcnumbers)) # 순서대로 정렬된 list를 리턴
 numhap = numbers + funcnumbers
 print(f"numbers 리스트와 funcnumbers 리스트의 전체 요소는 {numhap} 입니다.")

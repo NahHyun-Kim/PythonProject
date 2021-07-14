@@ -18,3 +18,11 @@ k = 100
 while k % 23 != 0:
     k = k + 1
 print(k)
+
+
+# 100이하의 자연수 중 8의 배수이지만 12의 배수는 아닌 것
+num = 1
+while num <= 100:
+    if (num % 8 == 0 and num % 12 != 0):
+        print(num)
+    num += 1

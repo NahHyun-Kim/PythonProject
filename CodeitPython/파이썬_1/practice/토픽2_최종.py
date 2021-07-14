@@ -62,6 +62,14 @@ def is_palindrome(word):
     else:
         return False
 
+    tmp = list(reversed(word))
+    string = ''.join(tmp)
+    if (word == string):
+        msg = True
+    else:
+        msg = False
+    return msg
+
 print(is_palindrome("racecar"))
 print(is_palindrome("wasitacatisaw")) # ebs
 print(is_palindrome("토마토"))
