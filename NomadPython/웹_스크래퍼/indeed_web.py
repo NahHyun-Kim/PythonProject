@@ -4,7 +4,8 @@ from bs4 import BeautifulSoup
 LIMIT = 50
 URL = f"https://www.indeed.com/jobs?q=python&limit={LIMIT}"
 
-def extract_indeed_pages():
+# 최대 페이지를 추출하여 그 페이지까지 웹 스크래퍼를 실행
+def get_last_page():
     result = requests.get(URL)
 
     # print(indeed__result.text) # 홈페이지로부터 가져온 텍스트 출력(html)
@@ -29,6 +30,7 @@ def extract_indeed_pages():
     max_page = pages[-1]
     return max_page
 
+# 각각의 태그를 전달받아 필요한 회사정보를 추출하여 object 객체로 반환함
 def extract_job(html):
     # select_one 메소드를 이용하면 리스트 형태로 저장되지 않고 가장 첫 태그를 호출(select: 리스트형태, for문으로 접근 필요)
     title = html.select_one('.jobTitle>span').string
@@ -69,6 +71,7 @@ def extract_indeed_jobs(last_page):
         results = soup.find_all("div", {"class" : "slider_container"})
 
         for result in results:
+            # 한개씩 추출한 html 태그를 전달하여 extract_job 함수를 통해 return 값을 object로 받아옴
             job = extract_job(result)
             jobs.append(job)
 
@@ -100,3 +103,9 @@ def extract_indeed_jobs(last_page):
     #             jobs.append(span_item.get("title"))
     # 변경전("a"태그가 있으면 -> company.find("a") is not None: company.find("a").string
     # ("a"태그가 없으면(else) -> company.string 으로 사용 가능
+
+def get_jobs():
+    last_page = get_last_page()
+    jobs = extract_indeed_jobs(last_page)
+
+    return jobs
