@@ -329,3 +329,4 @@ Thumbs.db
 
 # selenium webdriver
 webdriver/*
+OpenCV/image/
