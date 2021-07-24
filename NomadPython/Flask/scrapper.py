@@ -1,11 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 
-URL = f"https://stackoverflow.com/jobs?q=python&sort=i"
-
-def get_last_page():
+# parameter url 전달
+def get_last_page(url):
     # request 요청
-    result = requests.get(URL)
+    result = requests.get(url)
     soup = BeautifulSoup(result.text, 'html.parser')
 
     # <div class="s-pagination"> 안에 있는 "a" 태그를 모두 가져옴(.find_all("a"))
@@ -37,11 +36,11 @@ def extract_job(html):
             }
 
 # 1페이지부터 last_page까지 range로 loop를 돌리며 가져옴(for문 안에서 세부 정보 추출 함수를 실행)
-def extract_jobs(last_page):
+def extract_jobs(last_page, url):
     jobs = []
     for page in range(last_page):
         print(f"Scrapping SO: Page: {page}")
-        result = requests.get(f"{URL}&pg={page+1}")
+        result = requests.get(f"{url}&pg={page+1}")
         soup = BeautifulSoup(result.text, 'html.parser')
         results = soup.find_all("div", {"class" : "-job"})
         for result in results:
@@ -50,7 +49,10 @@ def extract_jobs(last_page):
             jobs.append(job)
     return jobs
 
-def get_jobs():
-    last_page = get_last_page()
-    jobs = extract_jobs(last_page)
+# 입력받은 word를 기반으로 직업 검색(url에 직업 입력)
+# url(직업 키워드에 따라)은 변경되기 때문에 get_jobs 안에서 url을 받고, url이 필요한 함수에 인자로 전달
+def get_jobs(word):
+    url = f"https://stackoverflow.com/jobs?q={word}&sort=i"
+    last_page = get_last_page(url)
+    jobs = extract_jobs(last_page, url)
     return jobs
